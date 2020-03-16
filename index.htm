@@ -17,6 +17,47 @@
   h6 {
     font-family: "Roboto", sans-serif
   }
+
+  .flip-card {
+    background-color: transparent;
+    width: 428px;
+    height: 432px;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
 </style>
 
 <body class="w3-light-grey">
@@ -32,13 +73,48 @@
 
         <div class="w3-white w3-text-grey w3-card-4">
           <div class="w3-display-container">
-            <img src="images/foto.png" style="width:100%" alt="Foto Francisco">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <!-- <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;"> -->
+                  <img src="images/foto.png" style="width:100%" alt="Foto Francisco">
+
+                </div>
+                <div class="flip-card-back">
+                  <h4>Apasionado por el trabajo.</h4>
+                  <h4>Comprometido con metas y objetivos.</h4>
+                  <h4>Focalizado en resultados.</h4>
+                  <h4>Disciplinado y esforzado.</h4>
+                  <h4>Amante de la buena lectura.</h4>
+                  <h4>Apasionado por el tenis y el ajedrez.</h4>
+                  <h4>A veces, futbol y baseball desvían mi atención.</h4>
+                  <h4>Disfruto un momento con los amigos.</h4>
+                </div>
+              </div>
+            </div>
+            <!-- <img src="images/foto.png" style="width:100%" alt="Foto Francisco"> -->
             <div class="w3-display-bottomleft w3-container w3-text-white">
               <h2>Francisco Díaz Dorta</h2>
             </div>
           </div>
           <div class="w3-container">
             <!--p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Desarrollador Web</p-->
+            <div class="w3-text-blue">
+              <br>
+              <h4>PERFIL</h4>
+            </div>
+            <p style="text-align: justify;">En mi desempeño profesional he tenido la oportunidad de familiarizarme con
+              diferentes tecnologías y
+              relacionarme con
+              todo tipo de profesionales en diversas disciplinas, tanto haciendo equipo como dando soporte, lo que me
+              permitió
+              delinear mi perfil como un profesional dinámico, altamente motivado, orientado a trabajar en equipo,
+              focalizado en
+              resultados y capaz de aportar soluciones estables y eficaces a los usuarios, asumiendo retos y alcanzando
+              metas en la
+              ejecución de proyectos informáticos donde el factor tiempo es determinante y constituye una ventaja
+              competitiva.</p>
+            <hr>
             <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Desarrollador Web</p>
             <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Valencia, España</p>
             <p><i class="fa fa-calendar fa-fw w3-margin-right w3-large w3-text-teal"></i>6/marzo/1961</p>
@@ -90,6 +166,22 @@
             <hr>
             <p class="w3-large w3-text-theme"><b><i
                   class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Idiomas</b></p>
+            <p>Español (Nativo)</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+            </div>
+            <p>Inglés (Bilingüe)</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge w3-teal" style="height:24px;width:85%"></div>
+            </div>
+            <p>Francés (Básico)</p>
+            <div class="w3-light-grey w3-round-xlarge">
+              <div class="w3-round-xlarge w3-teal" style="height:24px;width:20%"></div>
+            </div>
+            <br>
+            <hr>
+            <p class="w3-large w3-text-theme"><b><i
+                  class="fa fa-suitcase fa-fw w3-margin-right w3-text-teal"></i>PORTAFOLIO DE PROYECTOS</b></p>
             <p>Español (Nativo)</p>
             <div class="w3-light-grey w3-round-xlarge">
               <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
@@ -273,7 +365,7 @@
         <!-- <div class="w3-container w3-card w3-white w3-margin-bottom"> -->
         <div class="w3-container w3-card w3-white">
           <h2 class="w3-text-grey w3-padding-16"><i
-              class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Experiencia Laboral</h2>
+              class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>EXPERIENCIA LABORAL</h2>
           <div class="w3-container">
             <h5 class="w3-text-blue"><b>FRONT END DEVELOPER FREELANCE (Venezuela)</b></h5>
             <h5>FREELANCER (Venezuela)</h5>
@@ -357,7 +449,7 @@
 
   <footer class="w3-container w3-teal w3-center w3-margin-top">
     <p>Redes Sociales</p>
-    <div class="w3-bar w3-light-grey w3-border w3-xxlarge">
+    <div class="w3-bar w3-light-grey w3-border w3-large">
       <a href="http://www.facebook.com/amesnau" class="w3-bar-item w3-button w3-green" target="_blank"><i
           class="fa fa-facebook-official"></i></a>
       <a href="https://www.instagram.com/franciscodiaz361/" class="w3-bar-item w3-button" target="_blank"><i
